@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/abelwei/mock_image/draw_image"
 	"github.com/gin-gonic/gin"
-	"mock_image/draw_image"
 	"net/http"
 )
 

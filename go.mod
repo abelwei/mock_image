@@ -1,4 +1,4 @@
-module mock_image
+module github.com/abelwei/mock_image
 
 go 1.17
 
