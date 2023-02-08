@@ -84,9 +84,20 @@ func (self *PatternRect) settingDraw() (error, *gg.Context) {
 	if self.err != nil {
 		return self.err, nil
 	}
+	self.setDefaultIfNull()
 	ggContext := gg.NewContext(self.width, self.height)
 	ggContext.DrawRectangle(0, 0, float64(self.width), float64(self.height))
 	ggContext.SetRGB(float64(self.rgb.Red), float64(self.rgb.Green), float64(self.rgb.Blue))
 	ggContext.Fill()
 	return nil, ggContext
+}
+
+// 如果存在空值就设置默认值
+func (self *PatternRect) setDefaultIfNull() {
+	if self.width == 0 {
+		self.width = 100
+	}
+	if self.height == 0 {
+		self.height = 100
+	}
 }
