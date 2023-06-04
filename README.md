@@ -2,7 +2,7 @@
 
 启动之后，用下面这个链接试试？
 
-> http://localhost:8080/draw?dsl=rect:w=500,h=200,color=ff0000:
+> [http://localhost:8080/draw?dsl=rect:w=500,h=200,color=ff0000:](http://localhost:8080/draw?dsl=rect:w=500,h=200,color=ff0000:)
 
 目前的规则很简单，只有矩形和颜色，以后有新需求再增加.
 
