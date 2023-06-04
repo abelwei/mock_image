@@ -42,5 +42,10 @@ crisp:w=500,h=500,color=FF6EB4:
 ellipse:w=500,h=500,color=FF6EB4:
 ```
 
+图片中画出字体：
+```
+gofont:w=500,h=500,color=FF6EB4:size=24,char=iofdfa fdsafd,color=203fff
+```
+
 一力我滴giao
 

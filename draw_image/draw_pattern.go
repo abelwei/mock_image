@@ -52,7 +52,10 @@ func (self *DrawPattern) Parse(dsl string) *DrawPattern {
 		self.opt = NewPatternEllipse(patterArgSs)
 		self.opt.SetParam(param)
 		break
-
+	case "gofont":
+		self.opt = NewPatternGofont(patterArgSs)
+		self.opt.SetParam(param)
+		break
 	default:
 
 	}
