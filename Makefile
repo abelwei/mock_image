@@ -1,4 +1,8 @@
 
+
+test1:
+	go run ./tests/t1/main.go
+
 beziers: # 许多贝塞尔曲线
 	go run ./demo/beziers.go
 

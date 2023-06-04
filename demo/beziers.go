@@ -60,9 +60,9 @@ func randomCubic(dc *gg.Context) {
 func main() {
 	_, dir := draw_image.NewLoadEnv().GetGenerateDir()
 	const (
-		S = 256
-		W = 8
-		H = 8
+		S = 128
+		W = 3
+		H = 3
 	)
 	dc := gg.NewContext(S*W, S*H)
 	dc.SetRGB(1, 1, 1)
@@ -82,5 +82,5 @@ func main() {
 			dc.Pop()
 		}
 	}
-	dc.SavePNG(dir+"/beziers.png")
+	dc.SavePNG(dir + "/beziers.png")
 }

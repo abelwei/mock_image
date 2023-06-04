@@ -7,7 +7,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-type LoadEnv struct{
+type LoadEnv struct {
 	Err error
 }
 
@@ -22,10 +22,9 @@ func NewLoadEnv() *LoadEnv {
 }
 
 func (self *LoadEnv) GetGenerateDir() (err error, generateDir string) {
-	if self.Err!=nil {
+	if self.Err != nil {
 		return self.Err, generateDir
 	}
 	generateDir = os.Getenv("generate_dir")
-
 	return
 }

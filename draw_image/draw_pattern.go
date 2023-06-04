@@ -23,7 +23,12 @@ func (self *DrawPattern) Parse(dsl string) *DrawPattern {
 	case "rect":
 		self.opt = NewPatternRect(args)
 		break
-
+	case "beziers":
+		self.opt = NewPatternBeziers(args)
+		break
+	case "circle":
+		self.opt = NewPatternCircle(args)
+		break
 	default:
 
 	}
