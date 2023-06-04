@@ -15,19 +15,29 @@ func NewDrawPattern() *DrawPattern {
 
 func (self *DrawPattern) Parse(dsl string) *DrawPattern {
 
-	dslSs := strings.Split(dsl, ",")
-	pattern := dslSs[0]
-	var args []string
-	args = append(args, dslSs[1:]...)
+	dslSs := strings.Split(dsl, ":")
+	var (
+		pattern            string
+		patterArgSs, param []string
+	)
+
+	if len(dslSs) == 3 {
+		pattern = dslSs[0]
+		patterArgSs = strings.Split(dslSs[1], ",")
+		param = strings.Split(dslSs[2], ",")
+	}
+
 	switch pattern {
 	case "rect":
-		self.opt = NewPatternRect(args)
+		self.opt = NewPatternRect(patterArgSs)
+		self.opt.SetParam(param)
 		break
 	case "beziers":
-		self.opt = NewPatternBeziers(args)
+		self.opt = NewPatternBeziers(patterArgSs)
+		self.opt.SetParam(param)
 		break
 	case "circle":
-		self.opt = NewPatternCircle(args)
+		self.opt = NewPatternCircle(patterArgSs)
 		break
 	default:
 

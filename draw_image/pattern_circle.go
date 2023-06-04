@@ -19,6 +19,10 @@ func NewPatternCircle(args []string) *PatternCircle {
 	return &PatternCircle{args: args}
 }
 
+func (self *PatternCircle) SetParam(paramSs []string) {
+
+}
+
 func (self *PatternCircle) SaveFile(filePath string) error {
 	if err, ggContext := self.parse().settingDraw(); err == nil {
 		ggContext.SavePNG(filePath)

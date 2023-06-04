@@ -13,10 +13,17 @@ type PatternRect struct {
 	width  int
 	height int
 	rgb    RGB
+	param  rectParam
+}
+
+type rectParam struct {
 }
 
 func NewPatternRect(args []string) *PatternRect {
 	return &PatternRect{args: args}
+}
+
+func (self *PatternRect) SetParam(paramSs []string) {
 }
 
 func (self *PatternRect) parse() *PatternRect {

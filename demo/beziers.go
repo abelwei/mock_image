@@ -60,9 +60,9 @@ func randomCubic(dc *gg.Context) {
 func main() {
 	_, dir := draw_image.NewLoadEnv().GetGenerateDir()
 	const (
-		S = 128
-		W = 3
-		H = 3
+		S = 100
+		W = 1
+		H = 2
 	)
 	dc := gg.NewContext(S*W, S*H)
 	dc.SetRGB(1, 1, 1)
