@@ -38,6 +38,7 @@ func (self *DrawPattern) Parse(dsl string) *DrawPattern {
 		break
 	case "circle":
 		self.opt = NewPatternCircle(patterArgSs)
+		self.opt.SetParam(param)
 		break
 	default:
 

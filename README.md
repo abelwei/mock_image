@@ -22,5 +22,11 @@ color是16进制色，参考 https://sunpma.com/other/rgb/
 beziers:w=500,h=200,color=ff0000:square=100,row=5,column=2
 ```
 
+画圆形：
+```
+circle:w=500,h=500,color=FF6EB4:x=250,y=250,radius=250
+```
+
+
 一力我滴giao
 

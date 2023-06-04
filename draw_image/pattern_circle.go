@@ -13,6 +13,13 @@ type PatternCircle struct {
 	width  int
 	height int
 	rgb    RGB
+	param  circleParam
+}
+
+type circleParam struct {
+	centreX float64
+	centreY float64
+	radius  float64
 }
 
 func NewPatternCircle(args []string) *PatternCircle {
@@ -20,7 +27,39 @@ func NewPatternCircle(args []string) *PatternCircle {
 }
 
 func (self *PatternCircle) SetParam(paramSs []string) {
+	for _, param := range paramSs {
+		prmSs := strings.Split(param, "=")
+		if len(prmSs) > 1 {
+			switch prmSs[0] {
+			case "x":
+				centreX, err := strconv.ParseFloat(prmSs[1], 64)
+				if err != nil {
+					self.err = err
+					return
+				}
+				self.param.centreX = centreX
+				break
+			case "y":
+				centreY, err := strconv.ParseFloat(prmSs[1], 64)
+				if err != nil {
+					self.err = err
+					return
+				}
+				self.param.centreY = centreY
+				break
+			case "radius":
+				radius, err := strconv.ParseFloat(prmSs[1], 64)
+				if err != nil {
+					self.err = err
+					return
+				}
+				self.param.radius = radius
+				break
+			default:
 
+			}
+		}
+	}
 }
 
 func (self *PatternCircle) SaveFile(filePath string) error {
@@ -89,7 +128,7 @@ func (self *PatternCircle) settingDraw() (error, *gg.Context) {
 	}
 	self.setDefaultIfNull()
 	ggContext := gg.NewContext(self.width, self.height)
-	ggContext.DrawRectangle(0, 0, float64(self.width), float64(self.height))
+	ggContext.DrawCircle(self.param.centreX, self.param.centreY, self.param.radius)
 	ggContext.SetRGB255(int(self.rgb.Red), int(self.rgb.Green), int(self.rgb.Blue))
 	ggContext.Fill()
 	return nil, ggContext
