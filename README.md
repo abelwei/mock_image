@@ -32,5 +32,10 @@ circle:w=500,h=500,color=FF6EB4:x=250,y=250,radius=250
 crisp:w=500,h=500,color=FF6EB4:minor=10,major=50
 ```
 
+cubic:
+```
+crisp:w=500,h=500,color=FF6EB4:
+```
+
 一力我滴giao
 

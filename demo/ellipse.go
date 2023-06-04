@@ -17,8 +17,8 @@ func main() {
 		dc.Fill()
 		dc.Pop()
 	}
-	if im, err := gg.LoadImage("examples/gopher.png"); err == nil {
+	if im, err := gg.LoadImage("res/gopher.png"); err == nil {
 		dc.DrawImageAnchored(im, S/2, S/2, 0.5, 0.5)
 	}
-	dc.SavePNG(dir+"/ellipse.png")
+	dc.SavePNG(dir + "/ellipse.png")
 }

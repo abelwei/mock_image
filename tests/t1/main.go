@@ -7,7 +7,7 @@ import (
 
 func main() {
 	_, dir := draw_image.NewLoadEnv().GetGenerateDir()
-	drawFormDsl := `crisp:w=500,h=500,color=FF6EB4:minor=10,major=50`
+	drawFormDsl := `cubic:w=500,h=500,color=FF6EB4:`
 	//drawFormDsl := `beziers:w=500,h=200,color=000000:square=100,row=5,column=1`
 	filePath := dir + "/0t1.png"
 	err := draw_image.NewDrawPattern().Parse(drawFormDsl).SaveDisk(filePath)
