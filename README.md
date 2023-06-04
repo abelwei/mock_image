@@ -27,6 +27,10 @@ beziers:w=500,h=200,color=ff0000:square=100,row=5,column=2
 circle:w=500,h=500,color=FF6EB4:x=250,y=250,radius=250
 ```
 
+许多横竖线小格子：
+```
+crisp:w=500,h=500,color=FF6EB4:minor=10,major=50
+```
 
 一力我滴giao
 

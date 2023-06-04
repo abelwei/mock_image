@@ -9,8 +9,8 @@ func main() {
 	_, dir := draw_image.NewLoadEnv().GetGenerateDir()
 	const W = 1000
 	const H = 1000
-	const Minor = 10
-	const Major = 100
+	const Minor = 50
+	const Major = 200
 
 	dc := gg.NewContext(W, H)
 	dc.SetRGB(1, 1, 1)
@@ -38,9 +38,9 @@ func main() {
 		fy := float64(y) + 0.5
 		dc.DrawLine(0, fy, W, fy)
 	}
-	dc.SetLineWidth(1)
+	dc.SetLineWidth(2)
 	dc.SetRGBA(0, 0, 0, 0.5)
 	dc.Stroke()
 
-	dc.SavePNG(dir+"/crisp.png")
+	dc.SavePNG(dir + "/crisp.png")
 }

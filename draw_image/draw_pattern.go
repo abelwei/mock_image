@@ -40,6 +40,10 @@ func (self *DrawPattern) Parse(dsl string) *DrawPattern {
 		self.opt = NewPatternCircle(patterArgSs)
 		self.opt.SetParam(param)
 		break
+	case "crisp":
+		self.opt = NewPatternCrisp(patterArgSs)
+		self.opt.SetParam(param)
+		break
 	default:
 
 	}
