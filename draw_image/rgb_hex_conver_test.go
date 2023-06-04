@@ -6,13 +6,13 @@ func TestNewRgbHexConver(t *testing.T) {
 
 	conver := NewRgbHexConver()
 
-	err, rgb := conver.hex2rgb("668B8B")
+	err, rgb := conver.Hex2rgb("98F5FF")
 	if err != nil {
 		t.Fatal(err)
 	}
 	t.Logf("rgb:%+v", rgb)
 
-	err, hex := conver.rgb2hex(RGB{
+	err, hex := conver.Rgb2hex(RGB{
 		Red:   222,
 		Green: 33,
 		Blue:  243,

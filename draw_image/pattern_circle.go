@@ -68,7 +68,7 @@ func (self *PatternCircle) parse() *PatternCircle {
 				self.height = height
 				break
 			case "color":
-				err, rgb := NewRgbHexConver().hex2rgb(argSs[1])
+				err, rgb := NewRgbHexConver().Hex2rgb(argSs[1])
 				if err != nil {
 					self.err = err
 					return self
@@ -90,7 +90,7 @@ func (self *PatternCircle) settingDraw() (error, *gg.Context) {
 	self.setDefaultIfNull()
 	ggContext := gg.NewContext(self.width, self.height)
 	ggContext.DrawRectangle(0, 0, float64(self.width), float64(self.height))
-	ggContext.SetRGB(float64(self.rgb.Red), float64(self.rgb.Green), float64(self.rgb.Blue))
+	ggContext.SetRGB255(int(self.rgb.Red), int(self.rgb.Green), int(self.rgb.Blue))
 	ggContext.Fill()
 	return nil, ggContext
 }
