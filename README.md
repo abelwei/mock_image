@@ -37,5 +37,10 @@ cubic:
 crisp:w=500,h=500,color=FF6EB4:
 ```
 
+许多椭圆形成的花:
+```
+ellipse:w=500,h=500,color=FF6EB4:
+```
+
 一力我滴giao
 

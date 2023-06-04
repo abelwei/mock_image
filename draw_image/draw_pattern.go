@@ -48,6 +48,10 @@ func (self *DrawPattern) Parse(dsl string) *DrawPattern {
 		self.opt = NewPatternCubic(patterArgSs)
 		self.opt.SetParam(param)
 		break
+	case "ellipse":
+		self.opt = NewPatternEllipse(patterArgSs)
+		self.opt.SetParam(param)
+		break
 
 	default:
 
